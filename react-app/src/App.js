@@ -13,21 +13,22 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <Provider store={store}>
-        <div className="App">
-            <div>
-              <Route exact path="/" render={() => (
-                true ? (
-                  <Redirect to="/login"/>
-                ) : (
-                  <Home />
-                )
-              )}/>
-              <Route path="/home" component={Home}/>
-              <Route path="/login" component={Login}/>
-            </div>
-        </div>
-      </Provider>
+        <Provider store={store}>
+          <div className="App">
+              <div>
+                <Route exact path="/" render={() => (
+                  true ? (
+                    <Redirect to="/login"/>
+                  ) : (
+                    <Home />
+                  )
+                )}/>
+                <Route path="/home" component={Home}/>
+                <Route path="/login" component={Login}/>
+              </div>
+          </div>
+        </Provider>
+      
     );
   }
 }
